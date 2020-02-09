@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".punctureActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fill the form"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the Location in the map"
+        android:textColor="#000"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select the type of vehicle"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="#000"/>
+    <Spinner
+        android:id="@+id/sip_vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="90dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the number of Wheels"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One Wheel"
+            android:textSize="20dp"/>
+
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two Wheel"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Four Wheel"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"/>
+
+
+    </RadioGroup>
+
+        <Button
+            android:onClick="success"
+            android:id="@+id/pun_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
